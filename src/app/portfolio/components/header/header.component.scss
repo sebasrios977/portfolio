@@ -66,6 +66,7 @@
     right: 0;
     overflow: hidden;
     z-index: 100;
+    animation: slideIn 1s ease;
 
     @include m.mq(v.$tablet) {
       position: unset;
@@ -76,6 +77,16 @@
       margin-top: 0;
       padding: 0;
       z-index: 0;
+      animation: none;
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 

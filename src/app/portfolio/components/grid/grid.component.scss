@@ -121,6 +121,11 @@
         grid-row: 3 / 4;
       }
     }
+
+    a {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   &__image {
@@ -128,7 +133,7 @@
     cursor: pointer;
     transition: transform 0.3s;
     overflow: hidden;
-    opacity: .8;
+    opacity: 1;
 
     @include m.mq(v.$desktop) {
       height: 100%;
@@ -136,7 +141,7 @@
     }
 
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
 }

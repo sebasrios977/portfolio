@@ -30,11 +30,14 @@
   &__images {
     display: flex;
     column-gap: .5rem;
-    cursor: pointer;
 
     @include m.mq(v.$tablet) {
       column-gap: 1rem;
     }
+  }
+
+  &__icon {
+    cursor: pointer;
   }
 
   &__copyright {

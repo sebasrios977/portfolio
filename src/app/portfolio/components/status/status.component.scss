@@ -1,0 +1,36 @@
+@use '../../globales/variables' as v;
+@use '../../globales/mixins' as m;
+
+.status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0 8rem 0;
+
+  &__text {
+    color: darken(white, 20%);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    color: v.$colorPrimario;
+    font-size: 1.8rem;
+  }
+
+  &__contact {
+    margin: 2rem 0;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    border: 1px solid v.$colorPrimario;
+    padding: 2rem;
+    transition: all .5s;
+
+    &:hover {
+      color: v.$colorPrimario;
+      border-color: white;
+    }
+  }
+}

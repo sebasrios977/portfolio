@@ -1,0 +1,67 @@
+@use '../../globales/variables' as v;
+@use '../../globales/mixins' as m;
+
+.hero {
+
+  color: white;
+  margin-top: 10rem;
+
+  @include m.mq(v.$tablet) {
+    margin-top: 15rem;
+  }
+
+  &__circle {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .6);
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .5);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__info {
+    text-align: center;
+  }
+
+  &__name {
+    font-size: 2.4rem;
+    position: relative;
+    line-height: 1.5;
+
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: -35%;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, .6);
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  &__text {
+    font-size: 3rem;
+    // color: darken(white, 30%);
+    color: darken(v.$colorPrimario, 15%);
+    font-family: v.$fuenteTercera;
+
+    span {
+      display: block;
+    }
+  }
+}

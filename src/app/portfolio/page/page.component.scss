@@ -1,0 +1,16 @@
+@use '../globales/variables' as v;
+@use '../globales/mixins' as m;
+
+.page {
+  background-image: url(../../../assets/background-image-2.jpg);
+  background-color: rgba(0, 0, 0, .8);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 6rem 2rem 0rem 2rem;
+  overflow-x: hidden;
+
+  @include m.mq(v.$tablet) {
+    padding: 6rem 6rem 0 6rem;
+  }
+}

@@ -1,0 +1,63 @@
+@use '../../globales/variables' as v;
+@use '../../globales/mixins' as m;
+
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+
+  &__icon {
+    background-size: cover;
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+    animation: moveUpDown .7s ease-in-out infinite;
+    margin-top: 3rem;
+
+    &--up {
+      background-image: url(../../../../assets/arrow-up-svgrepo-com.svg);
+    }
+
+    &--down {
+      background-image: url(../../../../assets/arrow-down-svgrepo-com.svg);
+    }
+  }
+
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  &__title {
+    margin-top: 5rem;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    color: v.$colorPrimario;
+  }
+
+  &__intro,
+  &__text {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 2;
+    margin: 0;
+  }
+}

@@ -1,0 +1,30 @@
+<main id="portfolio" class="portfolio">
+  <div class="portfolio__info">
+    <span class="portfolio__span">Portfolio</span>
+    <p class="portfolio__text">Some projects.</p>
+  </div>
+
+  <div (click)="showPortfolio(false)" *ngIf="isPortfolioShown" class="portfolio__icon portfolio__icon--up"></div>
+  <div (click)="showPortfolio(true)" *ngIf="!isPortfolioShown" class="portfolio__icon portfolio__icon--down"></div>
+
+  <div *ngIf="isPortfolioShown" class="portfolio__grid">
+    <div class="portfolio__project">
+      <img src="../../../../assets/space-project.png" alt="space project" class="portfolio__image">
+    </div>
+    <div class="portfolio__project">
+      <img src="../../../../assets/maps-project.png" alt="maps project" class="portfolio__image">
+    </div>
+    <div class="portfolio__project">
+      <img src="../../../../assets/years-project.png" alt="years project" class="portfolio__image">
+    </div>
+    <div class="portfolio__project">
+      <img src="../../../../assets/heroes-project.png" alt="heroes project" class="portfolio__image">
+    </div>
+    <div class="portfolio__project">
+      <img src="../../../../assets/card-project.png" alt="card project" class="portfolio__image">
+    </div>
+    <div class="portfolio__project">
+      <img src="../../../../assets/coffee-project.png" alt="coffee project" class="portfolio__image">
+    </div>
+  </div>
+</main>

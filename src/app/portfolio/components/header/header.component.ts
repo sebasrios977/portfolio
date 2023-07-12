@@ -30,6 +30,8 @@ export class HeaderComponent {
   }
 
   showMenu(showMenu: boolean): void {
-    this.isMenuShown = showMenu;
+    if(this.screenWidth < 768) {
+      this.isMenuShown = showMenu;
+    }
   }
 }

@@ -8,34 +8,10 @@
   <div (click)="showPortfolio(true)" *ngIf="!isPortfolioShown" class="portfolio__icon portfolio__icon--down"></div>
 
   <div *ngIf="isPortfolioShown" class="portfolio__grid">
-    <div class="portfolio__project">
-      <a target="_blank" href="https://spacetourism-srr.netlify.app/#/space/home">
-        <img src="./assets/space-project.png" alt="space project" class="portfolio__image">
-      </a>
-    </div>
-    <div class="portfolio__project">
-      <a href="https://anime-angular.netlify.app/#/anime/home" target="_blank">
-        <img src="./assets/anime-project.png" alt="anime project" class="portfolio__image">
-      </a>
-    </div>
-    <div class="portfolio__project">
-      <a href="https://years-month-days-calculator.netlify.app/" target="_blank">
-        <img src="./assets/years-project.png" alt="years project" class="portfolio__image">
-      </a>
-    </div>
-    <div class="portfolio__project">
-      <a href="https://srrmaps.netlify.app/#/maps/fullscreen" target="_blank">
-        <img src="./assets/maps-project.png" alt="maps project" class="portfolio__image">
-      </a>
-    </div>
-    <div class="portfolio__project">
-      <a href="https://interactive-card-srr.netlify.app/" target="_blank">
-        <img src="./assets/card-project.png" alt="card project" class="portfolio__image">
-      </a>
-    </div>
-    <div class="portfolio__project">
-      <a href="https://coffee-srr.netlify.app/" target="_blank">
-        <img src="./assets/coffee-project.png" alt="coffee project" class="portfolio__image">
+
+    <div class="portfolio__project" *ngFor="let project of projects">
+      <a target="_blank" [href]="project.href" (mouseover)="showText = true" (mouseout)="showText = false">
+        <img [src]="project.src" [alt]="project.name" class="portfolio__image">
       </a>
     </div>
   </div>

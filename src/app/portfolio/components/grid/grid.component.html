@@ -10,7 +10,7 @@
   <div *ngIf="isPortfolioShown" class="portfolio__grid">
 
     <div class="portfolio__project" *ngFor="let project of projects">
-      <a target="_blank" [href]="project.href" (mouseover)="showText = true" (mouseout)="showText = false">
+      <a target="_blank" [href]="project.href">
         <img [src]="project.src" [alt]="project.name" class="portfolio__image">
       </a>
     </div>

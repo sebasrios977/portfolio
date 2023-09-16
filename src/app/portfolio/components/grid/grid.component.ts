@@ -15,7 +15,6 @@ export interface Projects {
 export class GridComponent {
 
   public isPortfolioShown:boolean = true;
-  public showText: boolean = false;
   public projects: Projects[] = [
     {
       name: 'Space Project',

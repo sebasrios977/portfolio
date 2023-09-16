@@ -57,5 +57,6 @@ export class GridComponent {
   showPortfolio(input: boolean): void {
     this.isPortfolioShown = input;
     return;
+
   }
 }

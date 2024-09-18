@@ -5,7 +5,7 @@
   </div>
 
   <img (click)="showMenu(true)" *ngIf="!isMenuShown" src="./assets/icon-hamburger.svg" alt="icono menu" class="header__menu">
-  <nav *ngIf="isMenuShown" class="header__nav">
+  <nav [ngClass]="isMenuShown ? 'header__nav--visible' : 'header__nav--hidden'" class="header__nav">
     <img (click)="showMenu(false)" src="./assets/icon-close.svg" alt="icono close" class="header__close">
     <a (click)="showMenu(false)" class="header__link" href="#skills">Skills</a>
     <a (click)="showMenu(false)" class="header__link" href="#portfolio">Portfolio</a>

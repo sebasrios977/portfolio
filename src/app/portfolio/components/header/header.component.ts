@@ -8,6 +8,7 @@ import { Component, HostListener } from '@angular/core';
 export class HeaderComponent {
 
   public isMenuShown: boolean = false;
+  public isClosing: boolean = false;
   private screenWidth: number = 0;
 
   constructor() {
@@ -31,6 +32,7 @@ export class HeaderComponent {
 
   showMenu(showMenu: boolean): void {
     if(this.screenWidth < 768) {
+      this.isClosing = !showMenu;
       this.isMenuShown = showMenu;
     }
   }

@@ -37,6 +37,11 @@
     width: 3rem;
     height: 3rem;
     cursor: pointer;
+    transition: transform 0.15s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
 
     @include m.mq(v.$tablet) {
       display: none;
@@ -48,6 +53,11 @@
     height: 3rem;
     cursor: pointer;
     margin-left: 70%;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: rotate(180deg);
+    }
 
     @include m.mq(v.$tablet) {
       display: none;
@@ -58,15 +68,27 @@
     display: flex;
     flex-direction: column;
     padding: 5rem 5rem 0 7rem;
-    margin-top: -4rem;
     row-gap: 7rem;
     height: 100vh;
     backdrop-filter: blur(1rem);
-    position: absolute;
+    position: fixed;
     right: 0;
+    top: 0;
     overflow: hidden;
+    opacity: 0;
     z-index: 100;
-    animation: slideIn 1s ease;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    &--hidden {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+
+    &--visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
 
     @include m.mq(v.$tablet) {
       position: unset;
@@ -74,7 +96,6 @@
       row-gap: auto;
       column-gap: 4rem;
       height: auto;
-      margin-top: 0;
       padding: 0;
       z-index: 0;
       animation: none;

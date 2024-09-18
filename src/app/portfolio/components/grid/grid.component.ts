@@ -54,8 +54,7 @@ export class GridComponent {
     },
   ]
 
-  showPortfolio(input: boolean): void {
-    this.isPortfolioShown = input;
-    return;
+  showPortfolio(): void {
+    this.isPortfolioShown = !this.isPortfolioShown;
   }
 }

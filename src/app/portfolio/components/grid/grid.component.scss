@@ -10,33 +10,21 @@
   justify-content: center;
   position: relative;
 
-
   &__icon {
     background-size: cover;
     height: 4rem;
     width: 4rem;
     cursor: pointer;
-    animation: moveUpDown .7s ease-in-out infinite;
-    margin: 3rem 0 3rem 0;
+    margin: 3rem 0;
+    background-image: url(../../../../assets/arrow-up-svgrepo-com.svg);
+    transition: transform 0.3s ease;
 
     &--up {
-      background-image: url(../../../../assets/arrow-up-svgrepo-com.svg);
+      transform: rotate(0deg);
     }
 
     &--down {
-      background-image: url(../../../../assets/arrow-down-svgrepo-com.svg);
-    }
-  }
-
-  @keyframes moveUpDown {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-2px);
-    }
-    100% {
-      transform: translateY(0);
+      transform: rotate(180deg);
     }
   }
 

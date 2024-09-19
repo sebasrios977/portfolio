@@ -5,7 +5,7 @@
   </div>
 
   <div (click)="showPortfolio()" [ngClass]="isPortfolioShown ? 'portfolio__icon--up' : 'portfolio__icon--down'" class="portfolio__icon"></div>
-  <div *ngIf="isPortfolioShown" class="portfolio__grid">
+  <div [ngClass]="isPortfolioShown ? 'portfolio__grid--visible' : 'portfolio__grid--hidden'" class="portfolio__grid">
 
     <div class="portfolio__project" *ngFor="let project of projects">
       <a target="_blank" [href]="project.href">

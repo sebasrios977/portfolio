@@ -3,7 +3,7 @@
 
 .portfolio {
 
-  margin-top: 5rem;
+  margin-top: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +17,7 @@
     cursor: pointer;
     margin: 3rem 0;
     background-image: url(../../../../assets/arrow-up-svgrepo-com.svg);
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 
     &--up {
       transform: rotate(0deg);
@@ -48,11 +48,22 @@
   }
 
   &__grid {
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+
+    &--visible {
+      opacity: 1;
+      max-height: 1000rem;
+    }
+
+    &--hidden {
+      opacity: 0;
+      max-height: 0;
+    }
 
     @include m.mq(v.$tablet) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
+      gap: 2rem;
     }
 
     @include m.mq(v.$desktop) {
@@ -73,6 +84,28 @@
     margin-bottom: 2rem;
     overflow: hidden;
     width: 100%;
+
+    &:hover {
+      animation: boxShadowAnimation .5s ease-in-out forwards;
+    }
+
+    @keyframes boxShadowAnimation {
+      0% {
+        box-shadow: -34px -34px 19px -40px rgba(255, 255, 255, 1);
+      }
+      25% {
+        box-shadow: 34px -34px 19px -40px rgba(255, 255, 255, 1);
+      }
+      50% {
+        box-shadow: 34px 34px 19px -40px rgba(255, 255, 255, 1);
+      }
+      75% {
+        box-shadow: -34px 34px 19px -40px rgba(255, 255, 255, 1);
+      }
+      100% {
+        box-shadow: 0 0 19px -40px rgba(255, 255, 255, 1);
+      }
+    }
 
     @include m.mq(v.$tablet) {
       margin-bottom: 0;
@@ -119,9 +152,9 @@
   &__image {
     width: 100%;
     cursor: pointer;
-    transition: transform 0.3s;
     overflow: hidden;
     opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 
     @include m.mq(v.$desktop) {
       height: 100%;
@@ -129,6 +162,7 @@
     }
 
     &:hover {
+      opacity: 0.7;
       transform: scale(1.1);
     }
   }

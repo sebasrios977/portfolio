@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 10rem;
 
   &__icon {
     background-size: cover;
@@ -19,10 +19,6 @@
 
     &--up {
       background-image: url(../../../../assets/arrow-up-svgrepo-com.svg);
-    }
-
-    &--down {
-      background-image: url(../../../../assets/arrow-down-svgrepo-com.svg);
     }
   }
 

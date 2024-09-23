@@ -1,13 +1,12 @@
 @use '../../globales/variables' as v;
 @use '../../globales/mixins' as m;
 
-
 .skills {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 10rem;
+  margin-top: 12rem;
 
   &__icon {
     background-size: cover;
@@ -18,7 +17,6 @@
     margin-top: 3rem;
 
     &--up {
-
       background-image: url(../../../../assets/arrow-up-svgrepo-com.svg);
     }
   }
@@ -41,13 +39,37 @@
     font-size: 1.5rem;
     line-height: 1;
     text-align: start;
+    width: 30rem;
+    display: inline-block;
+    transition: transform 0.5s;
+
+    @include m.mq(v.$tablet) {
+      width: 60rem;
+    }
   }
 
-  &__title {
-    margin-top: 5rem;
-    margin-bottom: 0;
-    font-size: 2.5rem;
+  &__letter {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 3rem;
     color: v.$colorPrimario;
+    text-transform: uppercase;
+
+    &:hover {
+      animation: wave .5s infinite;
+    }
+  }
+
+  @keyframes wave {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
 
   &__area {

@@ -41,18 +41,38 @@
     line-height: 1.5;
   }
 
-  &__span {
-    font-size: 2.5rem;
-    margin-top: 5rem;
+  &__letter {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 3rem;
     color: v.$colorPrimario;
+    text-transform: uppercase;
+
+    &:hover {
+      animation: wave .5s infinite;
+    }
+  }
+
+  @keyframes wave {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
 
   &__grid {
+    padding: 1rem;
+    overflow-y: hidden;
     transition: opacity 0.3s ease, max-height 0.3s ease;
 
     &--visible {
       opacity: 1;
-      max-height: 1000rem;
+      max-height: 100rem;
     }
 
     &--hidden {

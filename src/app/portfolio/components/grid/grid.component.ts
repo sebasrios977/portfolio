@@ -24,7 +24,7 @@ export class GridComponent {
     },
     {
       name: 'Anime Project',
-      href: 'https://anime-angular.netlify.app/#/anime/home',
+      href: 'https://anime-angular.netlify.app/#/home',
       src: './assets/anime-project.png',
       text: 'This project is a personal project. I really like anime, and I wanted to practice my Angular skills with this project.'
     },

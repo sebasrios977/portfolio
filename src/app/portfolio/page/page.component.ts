@@ -15,8 +15,13 @@ export class PageComponent implements OnInit {
   }
 
   preloadBackgroundImage(): void {
-    setTimeout(() => {
-      this.isImageLoaded = true;
-    }, 2000);
+    const img = new Image();
+    const baseHref = document.getElementsByTagName('base')[0].href;
+    img.src = `${baseHref}assets/background-image-2.jpg`;
+    img.onload = () => {
+      setTimeout(() => {
+        this.isImageLoaded = true;
+      }, 1000);
+    };
   }
 }

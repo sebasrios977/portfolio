@@ -1,8 +1,11 @@
-<div class="page">
-  <app-header />
-  <app-hero />
-  <app-skills />
-  <app-grid />
-  <app-status />
-  <app-footer />
-</div>
+<app-skeleton *ngIf="!isImageLoaded;else content"></app-skeleton>
+<ng-template #content>
+  <div class="page">
+    <app-header></app-header>
+    <app-hero></app-hero>
+    <app-skills></app-skills>
+    <app-grid></app-grid>
+    <app-status></app-status>
+    <app-footer></app-footer>
+  </div>
+</ng-template>

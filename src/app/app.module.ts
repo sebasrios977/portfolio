@@ -8,7 +8,7 @@ import { ComponentsModule } from './portfolio/components/components.module';
 @NgModule({
   declarations: [
     AppComponent,
-    PageComponent
+    PageComponent,
   ],
   imports: [
     BrowserModule,

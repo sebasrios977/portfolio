@@ -6,6 +6,7 @@ import { GridComponent } from './grid/grid.component';
 import { StatusComponent } from './status/status.component';
 import { FooterComponent } from './footer/footer.component';
 import { SkillsComponent } from './skills/skills.component';
+import { SkeletonComponent } from './skeleton/skeleton.component';
 
 
 
@@ -17,6 +18,7 @@ import { SkillsComponent } from './skills/skills.component';
     StatusComponent,
     FooterComponent,
     SkillsComponent,
+    SkeletonComponent,
   ],
   imports: [
     CommonModule
@@ -28,6 +30,7 @@ import { SkillsComponent } from './skills/skills.component';
     StatusComponent,
     FooterComponent,
     SkillsComponent,
+    SkeletonComponent
   ],
 })
 export class ComponentsModule { }

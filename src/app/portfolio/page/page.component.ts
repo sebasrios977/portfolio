@@ -21,7 +21,7 @@ export class PageComponent implements OnInit {
     img.onload = () => {
       setTimeout(() => {
         this.isImageLoaded = true;
-      }, 1000);
+      }, 2000);
     };
   }
 }

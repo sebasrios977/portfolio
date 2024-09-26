@@ -19,9 +19,7 @@ export class PageComponent implements OnInit {
     const baseHref = document.getElementsByTagName('base')[0].href;
     img.src = `${baseHref}assets/background-image-2.jpg`;
     img.onload = () => {
-      setTimeout(() => {
-        this.isImageLoaded = true;
-      }, 2000);
+      this.isImageLoaded = true;
     };
   }
 }

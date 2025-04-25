@@ -28,5 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 To upload to github pages we need to put the following sentence when making the ng build
-`ng build --output-path docs --base-href /sebastianPortfolio`
+`ng build --output-path docs --base-href /portfolio/`
 
